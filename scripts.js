@@ -29,12 +29,12 @@ window.onload = async () => {
         let UUID = await generateUUIDFromCredentials(username, password);
         console.debug(UUID);
         localStorage.setItem("UUID", UUID)
+        localStorage.setItem("username", username)
         removeURLParameters()
     }
     if (!localStorage.getItem("UUID")) {
-        console.log("fkzeqof")
         window.location.href = "/login"
     }
     const UUID = localStorage.getItem("UUID")
-    console.log(UUID)
+    console.debug(UUID)
 } 

@@ -20,6 +20,22 @@ body {
     padding: 0;
     margin: 0;
     background-color: var(--background-color);
-    height: 100vh;
-    width: 100vw;
+}
+
+button {
+    outline: 0;
+    padding: 10px;
+    margin: 0;
+    background-color: var(--focused-border-color);
+    border: 0;
+    border-radius: var(--border-radius);
+    transition: filter 0.2s;
+}
+
+button:hover {
+    filter: brightness(80%);
+}
+
+button:disabled {
+    filter: saturate(0%);
 }
